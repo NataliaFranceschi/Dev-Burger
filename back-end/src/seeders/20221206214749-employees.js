@@ -4,14 +4,14 @@ module.exports = {
       [{
         id: 1,
         name: 'Rafaela Siva',
-        email: 'rafaelasilva@gmail.com',
+        email: 'rafaela@db.com',
         password: '123456',
         position_held: 'Manager',
       },
       {
         id: 2,
         name: 'Joana Andrade',
-        email: 'joanaandrade@gmail.com',
+        email: 'joana@db.com',
         password: '123456',
         position_held: 'Waitress',
       },
