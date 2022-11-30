@@ -1,0 +1,17 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
+.nav {
+    @include column;
+    height: 88vh;
+    width: 15%;
+    button {
+        @include box;
+        background-color: $terciary-color;
+        flex-grow: 1;
+        width: 100%;
+        color: $primary-color;
+        font-weight: bold;
+        margin: 2px;
+    }
+}

@@ -1,0 +1,29 @@
+@use 'variables' as *;
+
+@mixin inputs {
+    border: 1px solid $input-color;
+    border-radius: 6px;
+    padding: 2px;
+    margin: 2px;
+    text-align: center;
+}
+
+@mixin column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin box {
+    border-radius: 6px;
+    box-shadow: 0px 3px 5px 3px rgb(0,0,0,0.25);
+    background-color: $bg-color;
+    border: none;
+}
+
+@mixin yellowButton {
+    color: $bg-color;
+    background-color: $secundary-color;
+    border: none;
+    border-radius: 6px;
+}

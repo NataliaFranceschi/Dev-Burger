@@ -1,0 +1,40 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.payment {
+    @include column;
+    width: 100%;
+
+    form{
+        @include column;
+
+        input, select {
+            @include inputs;
+            background-color: $bg-color;
+            width: 100%;
+    }
+
+
+    button {
+        background-color: $bg-color;
+        border: none;
+
+        svg {
+            font-size: 20px;
+            color: $secundary-color;
+            text-align: center;
+        }
+    }
+
+    }
+
+    .checkout {
+       @include yellowButton;
+        margin-top: 10px;
+    }
+
+    .checkout:disabled {
+        opacity: 0.6;
+
+    }
+}

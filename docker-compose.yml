@@ -1,0 +1,55 @@
+version: '3.1'
+
+services:
+  front-end:
+    image: node:16
+    container_name: dev_burger_front
+    working_dir: /app
+    restart: always
+    tty: true
+    stdin_open: true
+    command: bash
+    ports:
+      - 3000:3000
+    volumes:
+      - ./front-end:/app
+    depends_on:
+      - back
+
+  back-end:
+    image: node:16
+    container_name: dev_burger_back
+    working_dir: /app
+    restart: always
+    tty: true
+    stdin_open: true
+    command: bash
+    ports:
+      - 3001:3001
+    volumes:
+      - ./back-end:/app
+    depends_on:
+      - db
+    environment:
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=123123
+      - MYSQL_DATABASE=dev_burger
+      - MYSQL_HOST=db
+      - JWT_SECRET= secretJWT
+    networks:
+      - dev_burger
+
+  db:
+    image: mysql:8.0.23
+    container_name: dev_burger_db
+    restart: always
+    ports:
+      - 3307:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=123123
+    networks:
+      - dev_burger
+
+networks:
+  dev_burger:
+    driver: bridge  

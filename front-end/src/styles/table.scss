@@ -1,0 +1,54 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+table {
+    text-align: center;
+    width: 100%;
+    
+    caption {
+        background-color: $primary-color;
+        color: $secundary-color;
+    }
+
+    th{
+        color: $primary-color;
+    }
+
+    tr {
+        background-color:$terciary-color;
+    }
+
+    td {
+       padding: 3px;
+       max-width: 500px;
+       overflow: hidden;
+    }
+
+    tfoot {
+        color: $secundary-color;
+        font-weight: 500;
+    }
+
+}
+
+.table {
+    width: 100%;
+    max-height: 70vh;
+    overflow: scroll;
+}
+
+.edit {
+    @include yellowButton;
+    margin: 5px;
+    width: 70px;
+}
+
+.delete {
+    color: $bg-color;
+    background-color: $primary-color;
+    border: none;
+    border-radius: 6px;
+    width: 70px;
+}
+
+

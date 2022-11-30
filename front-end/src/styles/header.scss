@@ -1,0 +1,33 @@
+@use 'variables' as *;
+
+.header {
+    height: 80px;
+    width: 100vw;
+    background-color: $primary-color;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+        margin-top: 4px;
+        height: 70px;
+        width: auto;
+        margin-left: 10px;
+    }
+
+    icon {
+        margin-right: 20px;
+    }
+    
+    button {
+        background-color: $primary-color;
+        border: none;
+        margin-right: 5px;
+    }
+
+    svg {
+        color: $secundary-color;
+        font-size: 30px;
+    }
+}

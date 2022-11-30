@@ -1,0 +1,23 @@
+@use 'mixins' as *;
+
+.revenue, .products, .employee {
+    @include column;
+    margin: 30px;
+    width: 100%;
+
+    form {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 20px;
+
+        input {
+            @include inputs;
+            margin: 5px;
+        }
+        button {
+            @include yellowButton
+        }
+    }
+    
+}

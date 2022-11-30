@@ -1,0 +1,22 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.newOrder {
+    @include column;
+
+    input {
+        @include inputs;
+    }
+
+    button {
+        background-color: $bg-color;
+        border: none;
+
+        svg {
+            font-size: 20px;
+            color: $secundary-color;
+            text-align: center;
+        }
+    }
+
+}

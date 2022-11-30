@@ -1,0 +1,37 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.tables {
+    height: 88vh;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-content: center;
+
+    align-items: center;
+    justify-content: center;
+
+    button {
+        color: $primary-color;
+        font-size: 15px;
+        font-weight: bold;
+        height: 22%;
+        width: 15%;
+        margin: 30px;
+        @include box;
+    }
+
+    .active {
+        background-color: $terciary-color;
+    }
+
+    .empty {
+        background-color: $empty;
+    }
+
+    span {
+        font-weight: 100;
+        color: rgb(2, 68, 2);
+    }
+
+}
