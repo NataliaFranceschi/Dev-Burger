@@ -11,7 +11,7 @@ function Payment() {
   const [paymentMethod, setPaymentMethod] = useState([]);  
   const [payment, setPayment] = useState([]);  
   const [method, setMethod] = useState(1)
-  const [value, setValue] = useState(0)
+  const [value, setValue] = useState("")
   const [disabled, setDisabled] = useState(true)
   const history = useHistory();
 
@@ -58,7 +58,7 @@ function Payment() {
         value: Number(value)
       }, {headers: { Authorization: token.token}});
       await setPayment([...payment, newPayment.data])
-      setValue(0)
+      setValue("")
 
     } catch (error) {
       console.log(error);
