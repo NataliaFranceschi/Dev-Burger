@@ -5,14 +5,14 @@ import { useHistory } from 'react-router-dom';
 import '../styles/tables.scss';
 
 function Tables() {
-    const { getTableOrder } = useContext(devBurgerContext) 
+    const { getTableOrder, token } = useContext(devBurgerContext) 
     const [tables, setTables] = useState([]);
     const [activeTables, setActiveTables] = useState([]);
     const history = useHistory();
 
     const getTables = async () => {
       try {
-        const response = await devBurgerFetch.get('/table');
+        const response = await devBurgerFetch.get('/table', {headers: { Authorization: token.token}});
         const { data } = response;
   
         setTables(data);
